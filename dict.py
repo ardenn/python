@@ -16,8 +16,8 @@ def get_email(people_dict, name):
 
 def send_emails(people_dict):
     # my credentials
-    username = "rodgers.ouma@meltwater.org"
-    password = ""
+    username = input("Enter username: ")
+    password = input("Enter password: ")
 
     # connect to server
     server = smtplib.SMTP(host='smtp.gmail.com', port=587)
