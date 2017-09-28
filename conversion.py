@@ -8,6 +8,7 @@ unit_rates = {
 
 class Conversion:
 
+    @staticmethod
     def convert(measurement, value, unit):
         factor = unit_rates[measurement][2]
         unit1 = unit_rates[measurement][0]
@@ -17,6 +18,7 @@ class Conversion:
         else:
             return "{:.2f} {}".format((value / factor), unit1)
 
+    @staticmethod
     def convert_temp(value, unit):
         if unit == "F":
             return "{:.2f} C".format((value - 32) * 0.5556)
