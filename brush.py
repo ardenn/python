@@ -10,8 +10,9 @@ class Toothbrush:
         self.toothpaste = toothpaste
 
     def brush(self, teeth, seconds):
+        print("Brushing...")
         time.sleep(seconds)
-        print("finished brushing")
+        print("Finished brushing")
 
     def __repr__(self):
         return self.color
@@ -34,15 +35,17 @@ class ElectricToothbrush(Toothbrush):
             raise MemoryError("Forgot to turn the Toothbrush on")
         super().brush(teeth, time)
 
-# mytb = Toothbrush("green", toothpaste="colgate")
-# print(mytb)
-# myetb = ElectricToothbrush("blue", toothpaste="colgate")
-# print(myetb)
-yellow = ElectricToothbrush("yellow")
-# print(yellow)
-# eyram = Toothbrush("purple", "sensodyne")
-# print(eyram)
-# #eyram.brush("teeth", 5)
-#yellow.brush("teeth", 1)
-yellow.turn_on()
-yellow.brush("teeth", 1)
+
+if __name__ == '__main__':
+    # mytb = Toothbrush("green", toothpaste="colgate")
+    # print(mytb)
+    # myetb = ElectricToothbrush("blue", toothpaste="colgate")
+    # print(myetb)
+    yellow = ElectricToothbrush("yellow")
+    # print(yellow)
+    # eyram = Toothbrush("purple", "sensodyne")
+    # print(eyram)
+    # #eyram.brush("teeth", 5)
+    #yellow.brush("teeth", 1)
+    yellow.turn_on()
+    yellow.brush("teeth", 5)

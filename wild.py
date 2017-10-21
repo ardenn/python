@@ -1,11 +1,11 @@
 def normalWildCard(levels, char):
-    nums = 1  # number of stars
+    nums = 1
     centerLength = (1 + (levels - 1) * 2)
-    for level in range(levels - 1):
+    for level in range(levels):
         print(str(char * nums).center(centerLength))
         nums += 2
 
-#normalWildCard(6, "*")
+#normalWildCard(6, "B")
 
 
 def inverseWildCard(levels, char):
@@ -31,4 +31,4 @@ def printWildCard(levels, char):
     normalWildCard(levels, char)
     inverseWildCard(levels, char)
 
-printWildCard(3, "*")
+printWildCard(10, "*")
